@@ -16,6 +16,13 @@ const loadingProgress = document.querySelector(".loading-progress");
 // Root
 const root = document.querySelector(".root");
 
+// Header
+let headerNavModel = document.querySelector("#nav-model");
+let headerNavStores = document.querySelector("#nav-stores");
+let headerNavServices = document.querySelector("#nav-services");
+let headerNavAboutUs = document.querySelector("#nav-about-us");
+const navPos = -7;
+
 const loaderText1Logic = () => {
   let loaderText1 = "Powering Your Journey";
   let loaderText1Split = loaderText1.split("");
@@ -76,7 +83,7 @@ const loaderAnimation = () => {
   let timeline = gsap.timeline({ delay: 0.1 });
   gsap.to(loadingProgress, {
     width: "100%",
-    duration: 8.5,
+    duration: 9,
     ease: "power4.inOut",
   });
   gsap.to(loaderLoadingAnimation, {
@@ -145,8 +152,135 @@ const theLoader = () => {
   loaderAnimation();
 };
 
+const navModelAnimation = (element) => {
+  element.addEventListener("mouseenter", () => {
+    gsap.to(element, {
+      y: navPos,
+    });
+  });
+  element.addEventListener("mouseleave", () => {
+    gsap.to(element, {
+      y: 0,
+    });
+  });
+};
+
+const navStoresAnimation = (element) => {
+  element.addEventListener("mouseenter", () => {
+    gsap.to(element, {
+      y: navPos,
+    });
+  });
+  element.addEventListener("mouseleave", () => {
+    gsap.to(element, {
+      y: 0,
+    });
+  });
+};
+
+const navServicesAnimation = (element) => {
+  element.addEventListener("mouseenter", () => {
+    gsap.to(element, {
+      y: navPos,
+    });
+  });
+  element.addEventListener("mouseleave", () => {
+    gsap.to(element, {
+      y: 0,
+    });
+  });
+};
+
+const navAboutUsAnimation = (element) => {
+  element.addEventListener("mouseenter", () => {
+    gsap.to(element, {
+      y: navPos,
+    });
+  });
+  element.addEventListener("mouseleave", () => {
+    gsap.to(element, {
+      y: 0,
+    });
+  });
+};
+
+const headerNavSeperator = () => {
+  let navModelText = "Models";
+  let navModelSplit = navModelText.split("");
+
+  navModelSplit.forEach((element) => {
+    let modelSpan = document.createElement("span");
+    modelSpan.innerHTML = element;
+    modelSpan.classList.add("nav-model-span");
+    headerNavModel.appendChild(modelSpan);
+  });
+
+  let navModelSpan = document.querySelectorAll(".nav-model-span");
+  navModelSpan.forEach((element) => {
+    navModelAnimation(element);
+  });
+
+  let navStoresText = "Stores";
+  let navStoresSplit = navStoresText.split("");
+
+  navStoresSplit.forEach((element) => {
+    let storesSpan = document.createElement("span");
+    storesSpan.innerHTML = element;
+    storesSpan.classList.add("nav-stores-span");
+    headerNavStores.appendChild(storesSpan);
+  });
+
+  let navStoresSpan = document.querySelectorAll(".nav-stores-span");
+  navStoresSpan.forEach((element) => {
+    navStoresAnimation(element);
+  });
+
+  let navServicesText = "Services";
+  let navServicesSplit = navServicesText.split("");
+
+  navServicesSplit.forEach((element) => {
+    let servicesSpan = document.createElement("span");
+    servicesSpan.innerHTML = element;
+    servicesSpan.classList.add("nav-services-span");
+    headerNavServices.appendChild(servicesSpan);
+  });
+
+  let navServicesSpan = document.querySelectorAll(".nav-services-span");
+  navServicesSpan.forEach((element) => {
+    navServicesAnimation(element);
+  });
+
+  let navAboutUsText = "About";
+  let navAboutUsSplit = navAboutUsText.split("");
+
+  navAboutUsSplit.forEach((element) => {
+    let aboutUsSpan = document.createElement("span");
+    aboutUsSpan.innerHTML = element;
+    aboutUsSpan.classList.add("nav-about-us-span");
+    headerNavAboutUs.appendChild(aboutUsSpan);
+  });
+
+  let navAboutUsSpan = document.querySelectorAll(".nav-about-us-span");
+  navAboutUsSpan.forEach((element) => {
+    navAboutUsAnimation(element);
+  });
+};
+
+const headerLogic = () => {
+  headerNavSeperator();
+};
+
+const theHeader = () => {
+  headerLogic();
+};
+
+const theRoot = () => {
+  theHeader();
+};
+
 const theExecutioner = () => {
-  theLoader();
+  // theLoader();
+  theRoot();
 };
 
 theExecutioner();
