@@ -1,5 +1,7 @@
 // JSSCLP | JavaScript Command Line Panel
 
+gsap.registerPlugin(ScrollTrigger);
+
 // Body
 const body = document.querySelector("body");
 
@@ -22,6 +24,15 @@ let headerNavStores = document.querySelector("#nav-stores");
 let headerNavServices = document.querySelector("#nav-services");
 let headerNavAboutUs = document.querySelector("#nav-about-us");
 const navPos = -7;
+
+// Main
+
+// Hero Section
+const heroSectionVideo = document.querySelector(".hero-video video");
+const arrowIcon = document.querySelector(".hero-arrow-icon");
+const heroButtonWrapper = document.querySelector(".hero-button-wrapper");
+const heroButtonMover = document.querySelector(".hero-button-mover");
+const buttonText = document.querySelector(".hero-button-text");
 
 const loaderText1Logic = () => {
   let loaderText1 = "Powering Your Journey";
@@ -137,7 +148,7 @@ const loaderAnimation = () => {
     ease: "power4.easeOut",
   });
   timeline.to(body, {
-    overflow: "auto",
+    overflowY: "auto",
   });
   timeline.to(root, {
     opacity: 1,
@@ -274,8 +285,91 @@ const theHeader = () => {
   headerLogic();
 };
 
+const heroVideo = () => {
+  gsap.to(heroSectionVideo, {
+    duration: 1,
+    ease: "power4.inOut",
+    // width: "60%",
+    scale: 0.5,
+    scrollTrigger: {
+      trigger: heroSectionVideo,
+      scrub: 3,
+      // markers: true,
+      // Problem with markers when loader enabled
+      start: "20% 10%",
+      end: "80% 60%",
+    },
+  });
+};
+
+const heroArrowAnimation = () => {
+  document.addEventListener("mousemove", (event) => {
+    const angle = Math.atan2(
+      event.clientY - arrowIcon.offsetTop,
+      event.clientX - arrowIcon.offsetLeft
+    );
+
+    const angleDeg = angle * (180 / Math.PI);
+
+    gsap.to(arrowIcon, {
+      rotation: angleDeg,
+      ease: "linear",
+    });
+  });
+};
+
+const heroButtonLogic = () => {
+  heroButtonWrapper.addEventListener("mouseenter", () => {
+    gsap.to(heroButtonMover, {
+      scale: 30,
+      duration: 0.5,
+      ease: "back.in(0.2)",
+    });
+    gsap.to(buttonText, {
+      color: "black",
+      duration: 1,
+    });
+  });
+
+  heroButtonWrapper.addEventListener("mouseleave", () => {
+    gsap.to(heroButtonMover, {
+      opacity: 0,
+      scale: 1,
+      ease: "back.out(0.5)",
+    });
+    gsap.to(buttonText, {
+      color: "white",
+    });
+  });
+
+  heroButtonWrapper.addEventListener("mousemove", (event) => {
+    let rect = heroButtonWrapper.getBoundingClientRect();
+    gsap.to(heroButtonMover, {
+      top: event.clientY - rect.top,
+      left: event.clientX - rect.left,
+      ease: "back.out(2)",
+      opacity: 1,
+    });
+  });
+};
+
+const heroButton = () => {
+  // heroArrowAnimation();
+  heroButtonLogic();
+};
+
+const heroSection = () => {
+  heroVideo();
+  heroButton();
+};
+
+const theMain = () => {
+  heroSection();
+};
+
 const theRoot = () => {
   theHeader();
+  theMain();
 };
 
 const theExecutioner = () => {
@@ -284,3 +378,5 @@ const theExecutioner = () => {
 };
 
 theExecutioner();
+
+// scrollTrigger.refresh();
