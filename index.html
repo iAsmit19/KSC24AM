@@ -4,30 +4,57 @@
     <!-- Meta Data -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width = device-width" />
     <meta name="author" content="Muskan Dwivedi and Asmit Singh" />
     <meta
       name="keywords"
-      content="Kawasaki, Kawasaki Sheryians, KSC, KSC24AM"
+      content="Kawasaki, Series, Ninja, Z, KLX, KX, Vulcan, Urban, Cruiser"
     />
+    <meta name="robots" content="index, follow" />
     <!-- Browser Tab Data -->
     <title>Kawasaki | Powering your Journey, Every Ride, Every Adventure</title>
+    <link
+      rel="shortcut icon"
+      href="./Source/assets/favicons/favicon-kawasaki-white/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="./Source/assets/favicons/favicon-kawasaki-white/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      href="./Source/assets/favicons/favicon-kawasaki-white/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="./Source/assets/favicons/favicon-kawasaki-white/favicon-kawasaki-white.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./Source/assets/favicons/favicon-kawasaki-white/apple-touch-icon.png"
+    />
+    <link
+      rel="manifest"
+      href="./Source/assets/favicons/favicon-kawasaki-white/site.webmanifest"
+    />
     <!-- SCA |  Styles Communication Area -->
-    <link rel="stylesheet" href="./Source/StyleSheets/main-frame.css" />
+    <link rel="stylesheet" href="./Source/stylesheets/main-frame.css" />
   </head>
   <body>
-    <!-- SMA | Structural Modeling Area -->
     <div class="loader">
       <div class="loader-housing">
         <div class="loading-bar">
-          <div class="loading-bar">
-            <div class="loading-progress"></div>
-          </div>
+          <div class="loading-progress"></div>
         </div>
-        <div class="loader-text">
-          <div class="loader-text-housing">
-            <h1 class="loader-text-1"></h1>
-            <h1 class="loader-text-2"></h1>
-            <h1 class="loader-text-3"></h1>
+        <div class="loader-contents">
+          <div class="loader-contents-housing">
+            <div class="loader-texts loader-text-1"></div>
+            <div class="loader-texts loader-text-2"></div>
+            <div class="loader-texts loader-text-3"></div>
           </div>
         </div>
       </div>
@@ -35,24 +62,28 @@
     <div class="root">
       <header>
         <div class="header-housing">
-          <div class="logo-holder">
-            <div class="logo-holder-housing">
-              <a href="javascript:void(0)" draggable="false">
-                <div class="logo-part-1">
+          <div class="header-logo-holder">
+            <div class="header-logo-holder-housing">
+              <div class="header-logo-1">
+                <div class="header-logo-1-housing">
                   <img
+                    id="header-logo-1"
+                    src="./Source/assets/images/images-header/header-logo/logo-part-1/kawasaki-header-logo-pt-1.svg"
+                    alt="Kawasaki |"
                     draggable="false"
-                    src="./Source/Assets/Images/header-images/header-logo/part-1/kawasaki-header-logo-pt-1.svg"
-                    alt="Kawasaki"
                   />
                 </div>
-                <div class="logo-part-2">
+              </div>
+              <div class="header-logo-2">
+                <div class="header-logo-2-housing">
                   <img
+                    id="header-logo-2"
+                    src="./Source/assets/images/images-header/header-logo/logo-part-2/kawasaki -header-logo-pt-2.svg"
+                    alt=" Let The Good Times Roll"
                     draggable="false"
-                    src="./Source/Assets/Images/header-images/header-logo/part-2/kawasaki -header-logo-pt-2.svg"
-                    alt=" | Let The Good Times Roll"
                   />
                 </div>
-              </a>
+              </div>
             </div>
           </div>
           <div class="header-contents-holder">
@@ -60,64 +91,78 @@
               <div class="header-nav">
                 <nav>
                   <a
-                    id="nav-model"
+                    class="nav-model"
                     href="javascript:void(0)"
                     draggable="false"
                   ></a>
                   <a
-                    id="nav-stores"
+                    class="nav-store"
                     href="javascript:void(0)"
                     draggable="false"
                   ></a>
                   <a
-                    id="nav-services"
+                    class="nav-services"
                     href="javascript:void(0)"
                     draggable="false"
                   ></a>
                   <a
-                    id="nav-about-us"
+                    class="nav-about-us"
                     href="javascript:void(0)"
                     draggable="false"
                   ></a>
                 </nav>
               </div>
-              <div class="search-unit">
-                <div class="search-unit-housing">
-                  <img
-                    draggable="false"
-                    class="divider"
-                    src="./Source/Assets/Icons/header-icons/search-icons/divider.svg"
-                    alt="|"
-                  />
-                  <input type="text" placeholder="Find your Kawasaki . . ." />
-                  <img
-                    draggable="false"
-                    class="search-divider"
-                    src="./Source/Assets/Icons/header-icons/search-icons/search-divider.svg"
-                    alt="|"
-                  />
-                  <button class="search-icon">
+              <div class="header-search">
+                <div class="search-for-small">
+                  <div class="search-icon">
+                    <a href="javascript:void(0)">
+                      <img src="./Source/assets/icons/icons-header/icons-search-unit/search-icon.svg" alt="Search">
+                    </a>
+                  </div>
+                </div>
+                <div class="header-search-housing">
+                  <div class="search-divider">
                     <img
+                      src="./Source/assets/icons/icons-header/icons-search-unit/divider.svg"
+                      alt="|"
                       draggable="false"
-                      src="./Source/Assets/Icons/header-icons/search-icons/search-icon.svg"
+                    />
+                  </div>
+                  <input
+                    id="header-search-bar"
+                    type="text"
+                    placeholder="Search your Kawasaki . . ."
+                  />
+                  <div class="button-divider">
+                    <img
+                      src="./Source/assets/icons/icons-header/icons-search-unit/search-divider.svg"
+                      alt="|"
+                      draggable="false"
+                    />
+                  </div>
+                  <button id="search-button">
+                    <img
+                      src="./Source/assets/icons/icons-header/icons-search-unit/search-icon.svg"
                       alt="Enter"
+                      draggable="false"
                     />
                   </button>
-                  <img
-                    draggable="false"
-                    class="divider"
-                    src="./Source/Assets/Icons/header-icons/search-icons/divider.svg"
-                    alt="|"
-                  />
+                  <div class="search-divider">
+                    <img
+                      src="./Source/assets/icons/icons-header/icons-search-unit/divider.svg"
+                      alt="|"
+                      draggable="false"
+                    />
+                  </div>
                 </div>
               </div>
-              <div class="menu-icon">
-                <div class="menu-icon-housing">
+              <div class="header-menu">
+                <div class="header-menu-housing">
                   <a href="javascript:void(0)" draggable="false">
                     <img
+                      src="./Source/assets/icons/icons-header/icon-menu/menu-icon.svg"
+                      alt="#"
                       draggable="false"
-                      src="./Source/Assets/Icons/header-icons/menu-icons/menu-icon.svg"
-                      alt=""
                     />
                   </a>
                 </div>
@@ -126,447 +171,15 @@
           </div>
         </div>
       </header>
-
-      <main>
-        <div class="hero-section">
-          <div class="hero-section-housing">
-            <div class="hero-video">
-              <video
-                src="./Source/Assets/Videos/hero-videos/ninja-7-hybrid/ninja-7-hybrid-promo-video.mp4"
-                muted
-                autoplay
-                loop
-                control="false"
-              ></video>
-              <div class="hero-contents">
-                <div class="hero-contents-housing">
-                  <h1>Introducing the All-New</h1>
-                  <img
-                    src="./Source/Assets/Images/hero-images/White Ninja 7 Hybrid SVG.svg"
-                    alt="Ninja 7 Hybrid"
-                    draggable="false"
-                  />
-                  <div class="hero-button-wrapper">
-                    <a class="hero-button" href="javascript:void(0)">
-                      <p class="hero-button-text">
-                        Learn more
-                        <img
-                          class="hero-arrow-icon"
-                          src="./Source/Assets/Icons/hero-icons/arrow.svg"
-                          alt="->"
-                          draggable="false"
-                        />
-                      </p>
-                      <span class="hero-button-mover"></span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card-section">
-          <div class="card-section-housing">
-            <div class="heading">
-              <div class="heading-container">
-                <h1>Kawasaki's Top Picks for Ultimate Thrills</h1>
-                <div class="dot-container"></div>
-                <div class="shooting-star star-1"></div>
-                <div class="shooting-star star-2"></div>
-                <div class="shooting-star star-3"></div>
-                <div class="shooting-star star-4"></div>
-                <div class="shooting-star star-5"></div>
-              </div>
-            </div>
-            <div class="cards-holder card-indicator">
-              <div class="cards-holder-housing">
-                <div class="cards cards-indicator">
-                  <img src="./Assets/arrow.svg" alt="Chala Ja" />
-                </div>
-                <div class="cards">
-                  <div class="cards-housing">
-                    <div class="cards-graphics">
-                      <div class="cards-graphics-housing">
-                        <div class="cards-ambient-image">
-                          <img
-                            class="backdrop-image"
-                            src="./Assets/Ninja H2R for Background Dropshadow.png"
-                            alt=""
-                          />
-                          <div class="cards-image-housing">
-                            <div class="cards-image">
-                              <img
-                                class="card-main-img"
-                                src="./Assets/ninja-h2r-series-ninja.jpg"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cards-content">
-                      <div class="cards-content-housing">
-                        <div class="card-text">
-                          <div class="card-heading">
-                            <h1>Series Ninja</h1>
-                          </div>
-                          <div class="card-about">
-                            <p>
-                              Legendary Performance for the <br />
-                              Street and Track
-                            </p>
-                          </div>
-                          <div class="card-price-tag">
-                            <p>Starting from ₹3,19,000 onwards</p>
-                          </div>
-                        </div>
-                        <div class="card-button-container">
-                          <div class="card-button-housing">
-                            <div class="card-button-wrapper">
-                              <a class="card-button" href="javascript:void(0)">
-                                <p class="card-button-text">Check it Out</p>
-                                <span class="card-button-mover"></span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards">
-                  <div class="cards-housing">
-                    <div class="cards-graphics">
-                      <div class="cards-graphics-housing">
-                        <div class="cards-ambient-image">
-                          <img
-                            class="backdrop-image"
-                            src="./Assets/Ninja H2R for Background Dropshadow.png"
-                            alt=""
-                          />
-                          <div class="cards-image-housing">
-                            <div class="cards-image">
-                              <img
-                                class="card-main-img"
-                                src="./Assets/ninja-h2r-series-ninja.jpg"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cards-content">
-                      <div class="cards-content-housing">
-                        <div class="card-text">
-                          <div class="card-heading">
-                            <h1>Series Ninja</h1>
-                          </div>
-                          <div class="card-about">
-                            <p>
-                              Legendary Performance for the <br />
-                              Street and Track
-                            </p>
-                          </div>
-                          <div class="card-price-tag">
-                            <p>Starting from ₹3,19,000 onwards</p>
-                          </div>
-                        </div>
-                        <div class="card-button-container">
-                          <div class="card-button-housing">
-                            <div class="card-button-wrapper">
-                              <a class="card-button" href="javascript:void(0)">
-                                <p class="card-button-text">Check it Out</p>
-                                <span class="card-button-mover"></span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards">
-                  <div class="cards-housing">
-                    <div class="cards-graphics">
-                      <div class="cards-graphics-housing">
-                        <div class="cards-ambient-image">
-                          <img
-                            class="backdrop-image"
-                            src="./Assets/Ninja H2R for Background Dropshadow.png"
-                            alt=""
-                          />
-                          <div class="cards-image-housing">
-                            <div class="cards-image">
-                              <img
-                                class="card-main-img"
-                                src="./Assets/ninja-h2r-series-ninja.jpg"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cards-content">
-                      <div class="cards-content-housing">
-                        <div class="card-text">
-                          <div class="card-heading">
-                            <h1>Series Ninja</h1>
-                          </div>
-                          <div class="card-about">
-                            <p>
-                              Legendary Performance for the <br />
-                              Street and Track
-                            </p>
-                          </div>
-                          <div class="card-price-tag">
-                            <p>Starting from ₹3,19,000 onwards</p>
-                          </div>
-                        </div>
-                        <div class="card-button-container">
-                          <div class="card-button-housing">
-                            <div class="card-button-wrapper">
-                              <a class="card-button" href="javascript:void(0)">
-                                <p class="card-button-text">Check it Out</p>
-                                <span class="card-button-mover"></span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards">
-                  <div class="cards-housing">
-                    <div class="cards-graphics">
-                      <div class="cards-graphics-housing">
-                        <div class="cards-ambient-image">
-                          <img
-                            class="backdrop-image"
-                            src="./Assets/Ninja H2R for Background Dropshadow.png"
-                            alt=""
-                          />
-                          <div class="cards-image-housing">
-                            <div class="cards-image">
-                              <img
-                                class="card-main-img"
-                                src="./Assets/ninja-h2r-series-ninja.jpg"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cards-content">
-                      <div class="cards-content-housing">
-                        <div class="card-text">
-                          <div class="card-heading">
-                            <h1>Series Ninja</h1>
-                          </div>
-                          <div class="card-about">
-                            <p>
-                              Legendary Performance for the <br />
-                              Street and Track
-                            </p>
-                          </div>
-                          <div class="card-price-tag">
-                            <p>Starting from ₹3,19,000 onwards</p>
-                          </div>
-                        </div>
-                        <div class="card-button-container">
-                          <div class="card-button-housing">
-                            <div class="card-button-wrapper">
-                              <a class="card-button" href="javascript:void(0)">
-                                <p class="card-button-text">Check it Out</p>
-                                <span class="card-button-mover"></span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards">
-                  <div class="cards-housing">
-                    <div class="cards-graphics">
-                      <div class="cards-graphics-housing">
-                        <div class="cards-ambient-image">
-                          <img
-                            class="backdrop-image"
-                            src="./Assets/Ninja H2R for Background Dropshadow.png"
-                            alt=""
-                          />
-                          <div class="cards-image-housing">
-                            <div class="cards-image">
-                              <img
-                                class="card-main-img"
-                                src="./Assets/ninja-h2r-series-ninja.jpg"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cards-content">
-                      <div class="cards-content-housing">
-                        <div class="card-text">
-                          <div class="card-heading">
-                            <h1>Series Ninja</h1>
-                          </div>
-                          <div class="card-about">
-                            <p>
-                              Legendary Performance for the <br />
-                              Street and Track
-                            </p>
-                          </div>
-                          <div class="card-price-tag">
-                            <p>Starting from ₹3,19,000 onwards</p>
-                          </div>
-                        </div>
-                        <div class="card-button-container">
-                          <div class="card-button-housing">
-                            <div class="card-button-wrapper">
-                              <a class="card-button" href="javascript:void(0)">
-                                <p class="card-button-text">Check it Out</p>
-                                <span class="card-button-mover"></span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards">
-                  <div class="cards-housing">
-                    <div class="cards-graphics">
-                      <div class="cards-graphics-housing">
-                        <div class="cards-ambient-image">
-                          <img
-                            class="backdrop-image"
-                            src="./Assets/Ninja H2R for Background Dropshadow.png"
-                            alt=""
-                          />
-                          <div class="cards-image-housing">
-                            <div class="cards-image">
-                              <img
-                                class="card-main-img"
-                                src="./Assets/ninja-h2r-series-ninja.jpg"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cards-content">
-                      <div class="cards-content-housing">
-                        <div class="card-text">
-                          <div class="card-heading">
-                            <h1>Series Ninja</h1>
-                          </div>
-                          <div class="card-about">
-                            <p>
-                              Legendary Performance for the <br />
-                              Street and Track
-                            </p>
-                          </div>
-                          <div class="card-price-tag">
-                            <p>Starting from ₹3,19,000 onwards</p>
-                          </div>
-                        </div>
-                        <div class="card-button-container">
-                          <div class="card-button-housing">
-                            <div class="card-button-wrapper">
-                              <a class="card-button" href="javascript:void(0)">
-                                <p class="card-button-text">Check it Out</p>
-                                <span class="card-button-mover"></span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cards">
-                  <div class="cards-housing">
-                    <div class="cards-graphics">
-                      <div class="cards-graphics-housing">
-                        <div class="cards-ambient-image">
-                          <img
-                            class="backdrop-image"
-                            src="./Assets/Ninja H2R for Background Dropshadow.png"
-                            alt=""
-                          />
-                          <div class="cards-image-housing">
-                            <div class="cards-image">
-                              <img
-                                class="card-main-img"
-                                src="./Assets/ninja-h2r-series-ninja.jpg"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cards-content">
-                      <div class="cards-content-housing">
-                        <div class="card-text">
-                          <div class="card-heading">
-                            <h1>Series Ninja</h1>
-                          </div>
-                          <div class="card-about">
-                            <p>
-                              Legendary Performance for the <br />
-                              Street and Track
-                            </p>
-                          </div>
-                          <div class="card-price-tag">
-                            <p>Starting from ₹3,19,000 onwards</p>
-                          </div>
-                        </div>
-                        <div class="card-button-container">
-                          <div class="card-button-housing">
-                            <div class="card-button-wrapper">
-                              <a class="card-button" href="javascript:void(0)">
-                                <p class="card-button-text">Check it Out</p>
-                                <span class="card-button-mover"></span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-
-    <div class="under-construction">
-      <h1>Under Construction</h1>
-      <p>This site is currently Under Construction</p>
-      <p>Please visit again soon</p>
     </div>
 
     <!-- SCA |  Script Communication Area -->
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <!-- ScrollTrigger -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> -->
     <!-- Draggable -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/Draggable.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/Draggable.min.js"></script> -->
     <!-- Script File Communication -->
     <script src="./Source/Scripts/main-script.js"></script>
   </body>
