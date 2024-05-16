@@ -66,6 +66,7 @@ body {
   left: 0;
   user-select: none;
   transition: none;
+  z-index: 10;
 
   /* Uncomment to disable the loader */
   /* display: none; */
@@ -330,7 +331,7 @@ header {
 }
 
 .search-icon {
-  height: 15px;
+  height: 12px;
   width: auto;
 }
 
@@ -349,7 +350,7 @@ header {
 
 .header-menu {
   height: 100%;
-  width: 10%;
+  width: 5%;
 }
 
 .header-menu-housing {
@@ -363,8 +364,8 @@ header {
 
 .header-menu-housing a {
   /* background-color: rgb(39, 39, 39); */
-  height: 30px;
-  width: 35px;
+  height: 22px;
+  width: 22px;
 }
 
 .header-menu-housing a img {
@@ -402,6 +403,10 @@ header {
   #header-search-bar {
     font-size: 0.7rem;
   }
+  .header-menu-housing a {
+    height: 22px;
+    width: 22px;
+  }
 }
 
 @media (max-width: 1439px) and (min-width: 1024px) {
@@ -416,6 +421,16 @@ header {
   }
   .header-nav {
     width: 40%;
+  }
+  header {
+    padding-inline: 3vw;
+    height: 8vh;
+  }
+  #header-logo-1 {
+    height: 22px;
+  }
+  #header-logo-2 {
+    height: 14px;
   }
   .header-nav nav a {
     font-size: 0.7rem;
@@ -432,6 +447,10 @@ header {
   #header-search-bar {
     font-size: 0.6rem;
   }
+  .header-menu-housing a {
+    height: 21px;
+    width: 21px;
+  }
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
@@ -439,13 +458,14 @@ header {
     font-size: 1.5rem;
   }
   header {
+    padding-inline: 4vw;
     height: 6vh;
   }
   #header-logo-1 {
-    height: 24px;
+    height: 22px;
   }
   #header-logo-2 {
-    height: 15px;
+    height: 14px;
   }
   .header-logo-holder {
     width: 20%;
@@ -454,7 +474,7 @@ header {
     width: 80%;
   }
   .header-nav {
-    width: 50%;
+    width: 45%;
   }
   .header-nav nav a {
     font-size: 0.6rem;
@@ -471,6 +491,10 @@ header {
   #header-search-bar {
     font-size: 0.5rem;
   }
+  .header-menu-housing a {
+    height: 20px;
+    width: 20px;
+  }
 }
 
 @media (max-width: 767px) and (min-width: 425px) {
@@ -478,19 +502,14 @@ header {
     font-size: 1.3rem;
   }
   header {
+    padding-inline: 5vw;
     height: 6vh;
   }
   #header-logo-1 {
-    height: 22px;
+    height: 20px;
   }
   #header-logo-2 {
     height: 14px;
-  }
-  #header-logo-1 {
-    height: 24px;
-  }
-  #header-logo-2 {
-    height: 15px;
   }
   .header-logo-holder {
     width: 20%;
@@ -502,12 +521,11 @@ header {
     display: none;
     /* width: 60%; */
   }
-  /* Hide the nav elements and add them into the menu panel */
   .header-nav nav a {
     font-size: 0.6rem;
   }
   .header-search {
-    width: 10%;
+    width: 15%;
   }
   .header-search-housing {
     display: none;
@@ -518,10 +536,18 @@ header {
   #header-search-bar {
     font-size: 0.4rem;
   }
+  .header-menu-housing a {
+    height: 19px;
+    width: 19px;
+  }
 }
 @media (max-width: 424px) and (min-width: 375px) {
   .loader-texts {
     font-size: 1.3rem;
+  }
+  header {
+    padding-inline: 6vw;
+    height: 6vh;
   }
   #header-logo-1 {
     height: 21px;
@@ -543,7 +569,7 @@ header {
     font-size: 0.6rem;
   }
   .header-search {
-    width: 10%;
+    width: 20%;
   }
   .header-search-housing {
     display: none;
@@ -553,17 +579,28 @@ header {
   }
   #header-search-bar {
     font-size: 0.6rem;
+  }
+  .header-menu {
+    width: 10%;
+  }
+  .header-menu-housing a {
+    height: 18px;
+    width: 18px;
   }
 }
 @media (max-width: 374px) and (min-width: 320px) {
   .loader-texts {
     font-size: 1.3rem;
   }
+  header {
+    padding-inline: 6vw;
+    height: 8vh;
+  }
   #header-logo-1 {
-    height: 20px;
+    height: 17px;
   }
   #header-logo-2 {
-    height: 14px;
+    height: 12px;
   }
   .header-logo-holder {
     width: 20%;
@@ -579,7 +616,7 @@ header {
     font-size: 0.6rem;
   }
   .header-search {
-    width: 10%;
+    width: 20%;
   }
   .header-search-housing {
     display: none;
@@ -589,17 +626,29 @@ header {
   }
   #header-search-bar {
     font-size: 0.6rem;
+  }
+  .header-menu {
+    width: 10%;
+  }
+  .header-menu-housing a {
+    height: 18px;
+    width: 18px;
   }
 }
 @media (max-width: 319px) {
   .loader-texts {
     font-size: 1rem;
   }
+  header {
+    padding-inline: 6vw;
+    height: 7vh;
+  }
   #header-logo-1 {
-    height: 20px;
+    height: 19px;
   }
   #header-logo-2 {
-    height: 13px;
+    /* height: 12px; */
+    display: none;
   }
   .header-logo-holder {
     width: 20%;
@@ -615,7 +664,7 @@ header {
     font-size: 0.6rem;
   }
   .header-search {
-    width: 10%;
+    width: 20%;
   }
   .header-search-housing {
     display: none;
@@ -625,5 +674,12 @@ header {
   }
   #header-search-bar {
     font-size: 0.6rem;
+  }
+  .header-menu {
+    width: 10%;
+  }
+  .header-menu-housing a {
+    height: 18px;
+    width: 18px;
   }
 }
