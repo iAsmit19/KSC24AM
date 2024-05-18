@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const EXECUTIONOR = () => {
     // Comment to disable the loader
-    theLoader();
+    // theLoader();
 
     theHeader();
   };

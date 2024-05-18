@@ -69,7 +69,7 @@ body {
   z-index: 10;
 
   /* Uncomment to disable the loader */
-  /* display: none; */
+  display: none;
 }
 
 .loader-housing {
@@ -138,7 +138,7 @@ body {
   align-items: center; */
 
   /* Comment to disable Loader */
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 header {
@@ -313,13 +313,18 @@ header {
   outline: none;
   border: none;
   background-color: transparent;
-  padding: 5px;
+  padding: 7px 10px;
   cursor: pointer;
 }
 
 #search-button img {
   height: 15px;
   width: auto;
+}
+
+#search-button:hover {
+  border-radius: 5px;
+  background-color: #121212;
 }
 
 .search-for-small {
