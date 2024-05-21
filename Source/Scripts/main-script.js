@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const atNavAboutUs = document.querySelector(".nav-about-us");
   let navPos = -7;
 
+  // Main
+  // Hero Section
+
   // Working Bay
   const loaderTextLogic = () => {
     const loaderTextLogic_1 = () => {
@@ -272,11 +275,93 @@ document.addEventListener("DOMContentLoaded", () => {
     headerNavElements();
   };
 
+  const heroVideo = document.querySelector("#hero-video");
+  const heroSectionCont = document.querySelector(".hero-content");
+
+  const heroVideoLogic = () => {
+    gsap.to(heroVideo, {
+      width: "70%",
+      scrollTrigger: {
+        trigger: heroVideo,
+        scrub: 5,
+        // markers: true,
+        start: "20% top",
+        end: "60% 20%",
+      },
+    });
+    gsap.to(heroSectionCont, {
+      backgroundColor: "#00000000",
+      scrollTrigger: {
+        trigger: heroVideo,
+        scrub: true,
+        // markers: true,
+        start: "10% top",
+        end: "40% 20%",
+      },
+    });
+  };
+
+  const heroSection = () => {
+    heroVideoLogic();
+  };
+
+  const buttonWrapper = document.querySelector(".button-wrapper");
+  const buttonMover = document.querySelector(".button-mover");
+  const buttonText = document.querySelector(".button-text");
+
+  const buttonLogic = () => {
+    buttonWrapper.addEventListener("mouseenter", () => {
+      gsap.to(buttonMover, {
+        opacity: 1,
+      });
+
+      gsap.to(buttonMover, {
+        scale: 20,
+        ease: "back.in(0.1)",
+      });
+
+      // gsap.to(buttonText, {
+      //   ease: "back.in(0.2)",
+      //   filter: "invert(1)",
+      // });
+    });
+
+    buttonWrapper.addEventListener("mouseleave", () => {
+      gsap.to(buttonMover, {
+        opacity: 0,
+      });
+
+      gsap.to(buttonMover, {
+        scale: 1,
+        ease: "back.in(0.3)",
+      });
+
+      // gsap.to(buttonText, {
+      //   ease: "back.in(0.5)",
+      //   filter: "none",
+      // });
+    });
+
+    buttonWrapper.addEventListener("mousemove", (event) => {
+      let rect = buttonWrapper.getBoundingClientRect();
+      gsap.to(buttonMover, {
+        top: event.clientY - rect.top,
+        left: event.clientX - rect.left,
+      });
+    });
+  };
+
+  const theMain = () => {
+    heroSection();
+    buttonLogic();
+  };
+
   const EXECUTIONOR = () => {
     // Comment to disable the loader
-    // theLoader();
+    theLoader();
 
     theHeader();
+    theMain();
   };
   EXECUTIONOR();
 });
