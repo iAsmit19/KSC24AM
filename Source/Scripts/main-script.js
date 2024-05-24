@@ -280,7 +280,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const heroVideoLogic = () => {
     gsap.to(heroVideo, {
-      width: "70%",
+      // width: "1344px",
+      width: "70vw",
       scrollTrigger: {
         trigger: heroVideo,
         scrub: 5,
@@ -302,7 +303,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const heroSection = () => {
-    heroVideoLogic();
+    // heroVideoLogic();
   };
 
   const buttonWrapper = document.querySelector(".button-wrapper");
@@ -315,31 +316,32 @@ document.addEventListener("DOMContentLoaded", () => {
         opacity: 1,
       });
 
+      gsap.to(buttonText, {
+        mixBlendMode: "difference",
+        // filter: "invert(1)",
+      });
+
       gsap.to(buttonMover, {
         scale: 20,
         ease: "back.in(0.1)",
       });
-
-      // gsap.to(buttonText, {
-      //   ease: "back.in(0.2)",
-      //   filter: "invert(1)",
-      // });
     });
 
     buttonWrapper.addEventListener("mouseleave", () => {
-      gsap.to(buttonMover, {
-        opacity: 0,
-      });
-
       gsap.to(buttonMover, {
         scale: 1,
         ease: "back.in(0.3)",
       });
 
-      // gsap.to(buttonText, {
-      //   ease: "back.in(0.5)",
-      //   filter: "none",
-      // });
+      gsap.to(buttonMover, {
+        opacity: 0,
+        delay: 0.3,
+      });
+
+      gsap.to(buttonText, {
+        // filter: "none",
+        mixBlendMode: "none",
+      });
     });
 
     buttonWrapper.addEventListener("mousemove", (event) => {
@@ -358,7 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const EXECUTIONOR = () => {
     // Comment to disable the loader
-    theLoader();
+    // theLoader();
 
     theHeader();
     theMain();
